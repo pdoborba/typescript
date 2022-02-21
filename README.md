@@ -1,7 +1,7 @@
 # typescript
 Copilado de projetos desenvolvidos em TypeScript, utilizando TDD, Clean Architecture, Design Patterns e SOLID.
 
-##Project One
+## Project One
 
 [![Coverage Status](https://coveralls.io/repos/github/rmanguinho/clean-react/badge.svg?branch=master)](https://coveralls.io/github/rmanguinho/clean-react?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/github/rmanguinho/clean-react/badge.svg)](https://snyk.io/test/github/rmanguinho/clean-react)
