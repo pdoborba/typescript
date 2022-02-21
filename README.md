@@ -138,3 +138,9 @@ O objetivo é mostrar um sistema em ReactJs utilizando os novos Hooks, Recoil, c
 * Spies
 * Fakes
 * Dummies
+
+> ## Images Development
+
+<img src="https://i.ibb.co/HFKnnHq/Captura-de-Tela-2022-02-21-a-s-11-53-07.png" alt="sale" border="0">
+<img src="https://i.ibb.co/71pt2sw/Captura-de-Tela-2022-02-21-a-s-11-54-25.png" alt="sales1" border="0">
+<img src="https://i.ibb.co/3fYh25Z/Captura-de-Tela-2022-02-21-a-s-11-53-59.png" alt="sales2" border="0">
