@@ -1,0 +1,100 @@
+@import '../../styles/colors.scss';
+
+@keyframes spinner {
+  0% {
+    transform: translate(16px, 84px) scale(0);
+  }
+  25% {
+    transform: translate(16px, 84px) scale(0);
+  }
+  50% {
+    transform: translate(16px, 84px) scale(1);
+  }
+  75% {
+    transform: translate(84px, 84px) scale(1);
+  }
+  100% {
+    transform: translate(152px, 84px) scale(1);
+  }
+}
+
+@keyframes spinnerr {
+  0% {
+    transform: translate(152px, 84px) scale(1);
+  }
+  100% {
+    transform: translate(152px, 84px) scale(0);
+  }
+}
+
+@keyframes spinnerc {
+  0% {
+    background: $darkGreen;
+  }
+  25% {
+    background: $green;
+  }
+  50% {
+    background: $lightGreen;
+  }
+  75% {
+    background: $darkGreenSpecial;
+  }
+  100% {
+    background: $darkGreen;
+  }
+}
+
+.loading {
+  width: 200px;
+  height: 42px;
+  overflow: hidden;
+  background: $lighGray;
+}
+
+.spinner {
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  left: 3.5%;
+
+  div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-top: -80px;
+    border-radius: 50%;
+    transform: translate(84px, 84px) scale(1);
+    background: $darkGreen;
+    animation: spinner 3.3333333333333335s infinite cubic-bezier(0, 0.5, 0.5, 1);
+
+    &:nth-child(1) {
+      background: $darkGreenSpecial;
+      transform: translate(152px, 84px) scale(1);
+      animation: spinnerr 0.8333333333333334s infinite
+          cubic-bezier(0, 0.5, 0.5, 1),
+        spinnerc 3.3333333333333335s infinite step-start;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -0.8333333333333334s;
+      background: $darkGreen;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -1.6666666666666667s;
+      background: $darkGreenSpecial;
+    }
+
+    &:nth-child(4) {
+      animation-delay: -2.5s;
+      background: $lightGreen;
+    }
+
+    &:nth-child(5) {
+      animation-delay: -3.3333333333333335s;
+      background: $green;
+    }
+  }
+}

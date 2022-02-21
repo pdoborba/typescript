@@ -1,0 +1,78 @@
+@import '../../styles/colors.scss';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $darkGrey;
+  padding: 0% 30%;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $lighGray;
+    padding-bottom: 7%;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 5px 5px grey;
+
+    img {
+      margin-top: 7%;
+      width: 28%;
+    }
+
+    h2 {
+      margin: 25px 0px 5px 0px;
+      font-size: 20px;
+      color: $blue;
+    }
+
+    button {
+      background-color: $lightGreen;
+      line-height: 30px;
+      color: $blue;
+      border: none;
+      font-size: 16px;
+      font-weight: 100;
+      width: 14em;
+      border-radius: 4px;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: all 800ms ease;
+
+      &:hover {
+        background-color: $green;
+        color: $white;
+        transition: all 800ms ease;
+      }
+
+      &:disabled {
+        background-color: $darkGrey;
+        color: $blue;
+        cursor: not-allowed;
+      }
+    }
+
+    .linkLogin {
+      margin-top: 15px;
+      text-decoration: none;
+      color: $lightBlue;
+      &:hover {
+        color: $darkGreen;
+      }
+    }
+  }
+}

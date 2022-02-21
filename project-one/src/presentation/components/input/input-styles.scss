@@ -1,0 +1,87 @@
+@import '../../styles/colors.scss';
+
+.inputWrap {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &[data-status='valid'] {
+    border-bottom-color: $green;
+    &::after {
+      background-color: $green;
+    }
+  }
+
+  &[data-status='invalid'] {
+    border-bottom-color: $error;
+
+    &::after {
+      background-color: $error;
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $grey;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    transform-origin: 0%;
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+  }
+
+  &:focus-within {
+    border-color: transparent;
+
+    &::after {
+      transform: scaleX(1);
+    }
+
+    label {
+      transform: scale(0.9) translateY(-27px);
+    }
+  }
+}
+
+input {
+  border: 1px solid $darkGrey;
+  line-height: 5vh;
+  width: 17em;
+  border-radius: 4px;
+  background-color: $white;
+  color: grey;
+  margin-top: 4vh;
+  padding-left: 4%;
+
+  &:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+
+  &:not(:placeholder-shown) + label {
+    transform: scale(0.9) translateY(-27px);
+  }
+}
+
+label {
+  position: absolute;
+  left: 8px;
+  color: grey;
+  cursor: text;
+  top: 5.5vh;
+  transform-origin: 0%;
+  transform: scaleY(0px);
+  transition: transform 500ms ease;
+  font-size: 12.5px;
+}
+.status {
+  position: absolute;
+  right: 0.5em;
+  top: 4.3em;
+  font-size: 8px;
+  cursor: help;
+}
